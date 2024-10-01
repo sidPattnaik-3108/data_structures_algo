@@ -1,4 +1,4 @@
-package com.code.linkedlist.fundamentals;
+package com.code.fundamentals.linkedlist;
 
 public class SinglyLinkedList {
 	

@@ -1,4 +1,4 @@
-package com.code.stack.fundamentals;
+package com.code.fundamentals.stack;
 
 import java.util.EmptyStackException;
 
