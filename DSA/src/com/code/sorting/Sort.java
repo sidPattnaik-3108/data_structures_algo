@@ -28,6 +28,12 @@ public class Sort {
 		endTime = System.currentTimeMillis();
 		System.out.println("Insersion Sort: "+(endTime-startTime));
 		
+		startTime = System.currentTimeMillis();
+		SelectionSort selectionSort = new SelectionSort();
+		System.out.println(Arrays.toString(selectionSort.sort(arr)));
+		endTime = System.currentTimeMillis();
+		System.out.println("Selection Sort: "+(endTime-startTime));
+		
 		
 	}
 
