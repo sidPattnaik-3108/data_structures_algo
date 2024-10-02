@@ -10,10 +10,10 @@ public class Sort {
 		
 		
 		long startTime = System.currentTimeMillis();
-		SelectionSort selectionSort = new SelectionSort();
-		System.out.println(Arrays.toString(selectionSort.sort(arr)));
+		SimpleSort simpleSort = new SimpleSort();
+		System.out.println(Arrays.toString(simpleSort.sort(arr)));
 		long endTime = System.currentTimeMillis();
-		System.out.println("Selection sort: "+(endTime-startTime));
+		System.out.println("Simple sort: "+(endTime-startTime));
 		
 		startTime = System.currentTimeMillis();
 		BubbleSort bubbleSort = new BubbleSort();

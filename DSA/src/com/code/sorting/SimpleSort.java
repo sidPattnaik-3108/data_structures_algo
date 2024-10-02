@@ -1,6 +1,6 @@
 package com.code.sorting;
 
-public class SelectionSort {
+public class SimpleSort {
 //4,2,3,6,1,9,5,8
 	public int[] sort(int[] arr) {
 		for(int i = 0; i< arr.length; i++) {
