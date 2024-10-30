@@ -13,7 +13,7 @@ public class StreamApi {
 				new Student(2, "Pulkit", "Singh", 56, "Male", "Computer Engineering", 2018, "Delhi", 67),
 				new Student(3, "Ankit", "Patil", 25, "Female", "Mechanical Engineering", 2019, "Kerala", 164),
 				new Student(4, "Satish Ray", "Malaghan", 30, "Male", "Mechanical Engineering", 2014, "Kerala", 26),
-				new Student(5, "Roshan", "Mukd", 23, "Male", "Biotech Engineering", 2022, "Mumbai", 12),
+				new Student(5, "Poshan", "Mukd", 23, "Male", "Biotech Engineering", 2022, "Mumbai", 12),
 				new Student(6, "Chetan", "Star", 24, "Male", "Mechanical Engineering", 2023, "Karnataka", 90),
 				new Student(7, "Arun", "Vittal", 26, "Male", "Electronics Engineering", 2014, "Karnataka", 324),
 				new Student(8, "Nam", "Dev", 31, "Male", "Computer Engineering", 2014, "Karnataka", 433),
@@ -21,6 +21,35 @@ public class StreamApi {
 				new Student(10, "Shubham", "Pandey", 26, "Male", "Instrumentation Engineering", 2017, "Mumbai", 98));
 		
 		
+		
+		//List of Students whose Name starts with P
+		List<String> names = list.stream().filter(s->s.getFirstName().startsWith("P")).map(Student::getFirstName).collect(Collectors.toList());
+		System.out.println(names);
+		
+		
+		//Group the student name with respect to the department
+		Map<String, List<String>> map = list.stream().collect(Collectors.groupingBy(Student::getDepartmantName, Collectors.mapping(Student::getFirstName, Collectors.toList())));
+		System.out.println(map);
+		
+		//Print the list of student sorted based on their age and firstName;
+		List<String> sortedList =  list.stream().sorted(Comparator.comparing(Student::getAge)).map(Student::getFirstName).collect(Collectors.toList());
+		System.out.println(sortedList);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		extracted(list);
+	}
+
+	private static void extracted(List<Student> list) {
 		//List of Students whose Name starts with P
 		List<Student> studentList = list.stream().filter(st->st.getFirstName().startsWith("P")).collect(Collectors.toList());
 		System.out.println(studentList);
